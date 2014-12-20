@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Andrew Briggs Photography</title>
+
+    <meta name="description" content="Gallery of landscape and nature photography, from the UK and around the world.">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/socicon.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+
+  <body class="text-center">
+
+    <div class="row">
+      <img id="header-pic" class="img-circle" src="img/me.jpg" alt="Andrew Briggs Photography" />
+      <h1 id="header-text">Andrew Briggs Photography</h1>
+    </div>
+
+    <div class="row">
+      <a class="social-link" href="https://500px.com/MrABriggs" title="500px" target="_blank"><span class="socicon">w</span></a>
+      <a class="social-link" href="https://www.flickr.com/photos/brggsy/" title="Flickr" target="_blank"><span class="socicon">v</span></a>
+      <a class="social-link" href="http://cardinal.deviantart.com/" title="deviantART" target="_blank"><span class="socicon">J</span></a>
+      <a class="social-link" href="http://instagram.com/mrabriggs" title="Instagram" target="_blank"><span class="socicon">x</span></a>
+      <a class="social-link" href="https://twitter.com/MrABriggs" title="Twitter" target="_blank"><span class="socicon">a</span></a>
+    </div>
+
+    <div class="row">
+      <a id="email" href="mailto:info@andrewbriggsphotography.co.uk" title="Email" target="_blank"><h5>info@AndrewBriggsPhotography.co.uk</h5></a>
+    </div>
+
+    <noscript>
+      <div class="jumbotron">
+        <h1>This site requires javascript!</h1>
+        <p>To view the gallery, please ensure that javascript is not disabled in your browser settings, or upgrade to a browser which supports javascript such as Google's Chrome.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://www.google.com/chrome/browser/desktop/" role="button">Get Chrome</a></p>
+      </div>
+    </noscript>
+
+    <div class="row" id="cat-menu">
+      <ul class="list-inline">
+        <li><a href="#" data-bind="click: resetCategory">All</a></li>
+        <li><a href="#" data-bind="click: setCategory.bind($data, 'Landscape')">Landscape</a></li>
+        <li><a href="#" data-bind="click: setCategory.bind($data, 'Music')">Music</a></li>
+      </ul>      
+    </div>
+
+    <div class="row">
+      <div id="isotope-container" data-bind="foreach: items">
+        <a class="fancybox"  data-bind="attr: { href: ImageUri, title: Title }, style: { width: ThumbWidth, height: ThumbHeight }">
+          <img class="item lazy" data-bind="isotope: {container: '#isotope-container', itemSelector: '.item'}, attr: { alt: Title, 'data-original': ThumbUri, width: ThumbWidth, height: ThumbHeight }, css: Category" alt="Loading..." src="img/NFFFFFF-0.png" />
+          <div class="loading"></div>
+        </a>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-default scroll-to-top">Scroll to top &#x25B2;</button>
+
+    <div class="footer">
+      <p>
+        Photography &copy; Andrew Briggs - Powered by KO Gallery
+      </p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>    
+    <script type='text/javascript' src='js/knockout-3.2.0.js'></script>
+    <script type="text/javascript" src="js/centermasonry.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
